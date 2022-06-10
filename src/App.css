@@ -13,6 +13,12 @@
 }
 
 body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     width: 100%;
     min-height: 100vh;
     background-color: #171e32;
@@ -20,39 +26,14 @@ body {
     overflow-x: hidden;
 }
 
-.alice-carousel {
-    width: 60%!important;
-    margin: 0!important;
-    padding: 0;
-}
-
-.alice-carousel__wrapper {
-    width: 100%;
-}
-
-.alice-carousel__stage-item {
-    width: 180px!important;
-    margin-right: 60px!important;
-}
-
-#img1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 180px;
-}
-
-#img1 img {
-    cursor: pointer;
-}
-
-#img1 p {
-    margin-top: 10px;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 #card {
-    width: 270px;
-    height: 370px;
+    width: 250px;
+    height: 350px;
     background: #fff;
     border-radius: 20px;
     z-index: 1;
@@ -62,8 +43,8 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: -25%;
-    left: 25%;
+    top: -10%;
+    left: 51%;
     z-index:1;
 }
 
@@ -90,7 +71,7 @@ body {
 }
 
 #card #drink {
-    width: 95px;
+    width: 80px;
     margin-bottom: 25px;
 }
 
@@ -109,42 +90,43 @@ body {
     cursor: pointer;
 }
 
-.swiper {
-    position: absolute;
-    left: 12%;
-    width: 60%;
-    height: 450px;
-  }
+    /* Carousel */
+    .swiper {
+        position: absolute;
+        left: 12%;
+        width: 60%;
+        height: 450px;
+      }
   
-  .swiper-slide {
-    font-size: 18px;
-    background: #fff;
-    border-radius: 20px;
-    height: 380px!important;
+    .swiper-slide {
+      font-size: 18px;
+      background: #fff;
+      border-radius: 20px;
+      height: 380px!important;
+    
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      cursor: pointer;
+    }
   
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    cursor: pointer;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 170px;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 25px;
-  }
+    .swiper-slide img {
+      display: block;
+      width: 170px;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 25px;
+    }
   
     #left {
         left: 0;
@@ -196,8 +178,8 @@ body {
         color: #fff!important;
     }
    
-    
 
+    /* Chart */
     .chart-skills {
         margin: 0 auto;
         padding: 0;
@@ -225,7 +207,7 @@ body {
         content: '';
         width: inherit;
         height: inherit;
-        border: 45px solid rgba(211, 211, 211, .3);
+        border: 25px solid rgba(211, 211, 211, .3);
         border-bottom: none;
         border-top-left-radius: 175px;
         border-top-right-radius: 175px;
@@ -233,14 +215,15 @@ body {
       
       .chart-skills::after {
         content: 'Calorias';
+        letter-spacing: 1px;
         left: 50%;
-        bottom: 22px;
+        bottom: 30px;
         position: absolute;
-        left: 140px;
+        left: 135px;
         transform: rotate(-90deg);
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         font-weight: bold;
-        color: cadetblue;
+        color: #fff;
       }
       
       .chart-skills li {
@@ -249,7 +232,7 @@ body {
         left: 0;
         width: inherit;
         height: inherit;
-        border: 45px solid;
+        border: 25px solid;
         border-top: none;
         border-bottom-left-radius: 175px;
         border-bottom-right-radius: 175px;
@@ -263,28 +246,28 @@ body {
       
       .chart-skills li:nth-child(1) {
         z-index: 4;
-        border-color: green;
+        border-color: #81CE6A;
         animation-name: rotate-one;
         transform: rotate(90deg);
       }
       
       .chart-skills li:nth-child(2) {
         z-index: 3;
-        border-color: firebrick;
+        border-color: #E7F337;
         animation-name: rotate-two;
         animation-delay: .4s;
       }
       
       .chart-skills li:nth-child(3) {
         z-index: 2;
-        border-color: steelblue;
+        border-color: #F33A3A;
         animation-name: rotate-three;
         animation-delay: .8s;
       }
       
       .chart-skills li:nth-child(4) {
         z-index: 1;
-        border-color: orange;
+        border-color: #B932FB;
         animation-name: rotate-four;
         animation-delay: 1.2s;
       }
@@ -299,27 +282,27 @@ body {
       .chart-skills li:nth-child(1) span {
         top: 5px;
         left: 10px;
-        transform: rotate(-200.6deg);
+        transform: rotate(-109deg);
       }
       
       .chart-skills li:nth-child(2) span {
         top: 20px;
         left: 10px;
-        transform: rotate(-178.2deg);
+        transform: rotate(-170deg);
         animation-delay: .4s;
       }
       
       .chart-skills li:nth-child(3) span {
         top: 18px;
         left: 10px;
-        transform: rotate(-200.4deg);
+        transform: rotate(-230.4deg);
         animation-delay: .8s;
       }
       
       .chart-skills li:nth-child(4) span {
         top: 10px;
         left: 10px;
-        transform: rotate(-180deg);
+        transform: rotate(-270deg);
         animation-delay: 1.2s;
       }
       
@@ -422,6 +405,106 @@ body {
             animation: slide1 2s ease-in-out infinite;     
         }
 
+        /* slick-carousel */
+        .slick-slider {
+          width: 60%;
+          margin-left: 30%;
+          margin-top: 40px;
+          margin-bottom: 80px;
+          cursor: pointer;
+        }
 
+        #passo {
+          display: flex!important;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 310px!important;
+          height: 300px;
+          padding: 15px 20px;
+          background: #EFEFEE;
+          color: #000;
+          position: relative;
+        }
 
-        
+        #numero {
+          position: absolute;
+          left: 10%;
+          top: 10%;
+          color: #3D3838;
+        }
+
+        #txt {
+          width: 180px;
+          font-family: 'Open Sans';
+          font-size: 14px;
+          letter-spacing: 1px;
+          margin-top: 15px;
+        }
+
+        #images {
+          width: 130px;
+        }
+
+        /* carousel test */
+        .test {
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          margin-top: 50px;
+        }
+
+        .test .slick-slider {
+          width: 55%;
+          margin-left: 35%;
+        }
+
+        .slide img {
+          width: 180px!important;
+          margin: 0 auto;
+        }
+
+        .slide {
+          transform: scale(0.7);
+          transition: transform 300ms;
+          display: flex!important;
+          flex-direction: column;
+          align-items: center!important;
+        }
+
+        .activeSlide {
+          transform: scale(0.9);
+        }
+
+        .arrow {
+          position: absolute;
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        .arrow svg {
+          transition: color 300ms;
+        }
+
+        .next {
+          right: -5%;
+          top: 50%;
+        }
+
+        .prev {
+          left: -5%;
+          top: 50%;
+        }
+
+        .inicio {
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+        }
+
+        .inicio .slick-slider {
+          margin-top: 70px;
+          margin-left: 20%;
+        }
