@@ -1,6 +1,7 @@
 import react from 'react'
 import styled from 'styled-components'
-import { faMessage, faUtensils, faMartiniGlassEmpty, faUser, faMicrophone } from "@fortawesome/free-solid-svg-icons";
+import { faUtensils, faMartiniGlassEmpty } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faMessage, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 
@@ -9,7 +10,7 @@ const Footer = () => {
         <Img>
             <div id="icons">
                 <ul>
-                    <Link to="/pratos" style={{ color:'white' }}>
+                    <Link to="/inicio" style={{ color:'white' }}>
                         <li><FontAwesomeIcon icon={faUtensils}/></li>
                     </Link>
                     <Link to="/home" style={{ color:'white' }}>
@@ -22,7 +23,7 @@ const Footer = () => {
                         <li><FontAwesomeIcon icon={faUser}/></li>
                     </Link>
                     <Link to="/home" style={{ color:'white' }}>
-                        <li><FontAwesomeIcon icon={faMicrophone}/></li>
+                        <li><FontAwesomeIcon icon={faHeart}/></li>
                     </Link>
                 </ul>
             </div>
@@ -33,17 +34,20 @@ const Footer = () => {
 export default Footer;
 
 const Img = styled.div`
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+
     #icons {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 50px;
-        margin-bottom: 80px;
+        position: block;
         
         ul li {
             list-style: none;
             float: left;
-            margin: 20px;
+            margin: 0px 20px;
             font-size: 20px;
             position: relative;
             cursor: pointer;
@@ -63,7 +67,6 @@ const Img = styled.div`
             transform: scale(0);
             transition: .5s ease-in-out;
             z-index: -1;
-            margin: 20px;
         }
 
         ul li:hover:before {
@@ -80,7 +83,6 @@ const Img = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 20px;
         }
     }
 `

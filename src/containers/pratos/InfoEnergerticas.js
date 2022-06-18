@@ -48,7 +48,7 @@ const InfoEnergeticas = () => {
 export default InfoEnergeticas;
 
 const Section = styled.div`
-  
+
 `
 
 const Subtitle = styled.div`

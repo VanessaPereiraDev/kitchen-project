@@ -52,6 +52,7 @@ const Container = styled.div`
     height: 380px;
     position: absolute;
     left: 5%;
+    bottom: 0%;
 
     #title {
         font-family: 'Open Sans';

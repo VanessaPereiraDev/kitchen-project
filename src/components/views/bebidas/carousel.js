@@ -54,7 +54,7 @@ const Test = () => {
         image: 'long1',
       },
       {
-        title: 'Green Cocktail',
+        title: 'Cocktail',
         image: 'long1',
       },
       {
@@ -83,7 +83,7 @@ const Test = () => {
                 {images.map((item, idx) => (
                     <div className={idx === imageIndex ? "slide activeSlide" : "slide"} onClick={handleShow}>
                         <img src={require('../../../assets/' + item.image + '.png')} alt={item.title} />
-                        <p style={{fontSize:'18px', letterSpacing:'1px', marginTop: '15px', marginLeft:'18px'}}>
+                        <p style={{fontFamily:'Montserrat', fontSize:'19px', letterSpacing:'1.2px', marginTop: '15px'}}>
                           {item.title}
                         </p>
                     </div>

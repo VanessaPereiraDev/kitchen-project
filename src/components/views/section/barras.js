@@ -31,7 +31,8 @@ export default HorizBar;
 const Barras = styled.div`
     box-sizing: border-box;
     position: absolute;
-    left: 6%;
+    left: 5%;
+    bottom: 0%;
 
     .box {
         width: 230px;

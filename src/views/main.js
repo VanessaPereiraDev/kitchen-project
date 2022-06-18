@@ -7,6 +7,7 @@ import Apresentacao from '../containers/pratos/Apresentacao';
 import Home from '../containers/bebidas/Apresentacao';
 import Detail from '../containers/bebidas/Detail';
 import Preparacao from '../containers/pratos/Preparacao';
+import Buy from '../containers/comprar/Buy';
 //router
 import { BrowserRouter,Routes,Route, Navigate} from "react-router-dom";
 
@@ -36,6 +37,9 @@ const Main = () => {
             </Route>
             <Route exact path="/infoenerg">
               <Route index element={<><InfoEnergeticas/></>}/>
+            </Route>
+            <Route exact path="/comprar">
+              <Route index element={<><Buy/></>}/>
             </Route>
         </Routes>
       </BrowserRouter>

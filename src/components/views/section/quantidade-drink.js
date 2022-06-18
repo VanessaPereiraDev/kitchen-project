@@ -56,7 +56,7 @@ const SideSection = styled.div`
     border-radius: 25px;
     position: absolute;
     left: 5%;
-    bottom: 5%;
+    bottom: 0%;
 `
 
 const Detail = styled.div`

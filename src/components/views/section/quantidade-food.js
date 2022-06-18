@@ -48,7 +48,8 @@ const SideSection = styled.div`
     background: #283046;
     border-radius: 25px;
     position: absolute;
-    left: 80px;
+    left: 5%;
+    bottom: 0%;
 `
 
 const Content = styled.div`

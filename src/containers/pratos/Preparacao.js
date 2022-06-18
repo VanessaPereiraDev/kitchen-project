@@ -10,7 +10,6 @@ import Fade from 'react-reveal/Fade';
 const Preparacao = () => {
 
     const [show, setShow] = useState(false);
-    const [tag, setTag] = useState(true);
 
     return (
         <Group>
@@ -19,11 +18,9 @@ const Preparacao = () => {
               <h2>Preparação</h2>
               <img src="/images/heart.png" id="heart" />
             </Subtitle>
-            {tag &&
-                <Fade top duration={3000}>
-                    <Instrucoes/>
-                </Fade>
-            }
+            <Fade top duration={3000}>
+                <Instrucoes/>
+            </Fade>
             <Cursor>
                 <img class="blink" src="/images/click1.png" />
             </Cursor>
@@ -32,7 +29,7 @@ const Preparacao = () => {
                     <Video/>
                 </Zoom>
             }
-            <div id="suggestion" onClick={() => {setShow(!show); setTag(!tag)}}>
+            <div id="suggestion" onClick={() => { setShow(!show) }}>
                 <p>Ver vídeo</p>
                 <img src="/images/next.png" />
             </div>
@@ -61,19 +58,8 @@ const Group = styled.div`
         img {
             width: 17px;
             margin-left: 10px;
-            animation: slide1 1s ease-in-out infinite;
+            transform: rotate(90deg);
         }
-
-        @keyframes slide1 {
-            0%,
-            100% {
-              transform: translate(0, 0);
-            }
-          
-            50% {
-              transform: translate(10px, 0);
-            }
-          }
     }
 `
 

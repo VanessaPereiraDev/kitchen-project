@@ -17,7 +17,7 @@ const Home = () => {
                 <Carousel />
             </Fade>
             <Quantidade/>
-            {/*<Footer/>*/}
+            <Footer/>
         </Section>
     )
 }
